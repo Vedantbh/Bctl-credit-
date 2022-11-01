@@ -10,7 +10,7 @@ contract CreditLimit{
     function getcredlim() public view returns (uint) return credlim;
 
     function expense(uint travel, uint food, uint stay) public {
-        require(credlim - travel - food - stay >= 0, "This transaction cannot be processed");
+        require(credlim - travel - food - stay >= 0, " Transaction failed");
         credlim = credlim - travel - food - stay;
     }
 
